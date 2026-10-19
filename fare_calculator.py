@@ -1,16 +1,23 @@
-# Travel Fare Calculator
-FARE_RATE = 14
+# Movie Ticket Calculator (Simple Version)
+TICKET_PRICE = 250
 
-name = input("Enter passenger name: ")
-distance = float(input("Enter distance (km): "))
-passengers = int(input("Enter number of passengers: "))
+customer_name = input("Enter customer name: ")
+movie_choice = input("Select movie (1: Action, 2: Comedy, 3: Horror): ")
+tickets = int(input("Enter number of tickets: "))
 
-total_fare = distance * FARE_RATE * passengers
+# Simple validation check
+if customer_name == "" or tickets <= 0:
+    print("Error: Invalid name or ticket quantity.")
+else:
+    if movie_choice == "1":
+        movie_title = "Action Blockbuster"
+    elif movie_choice == "2":
+        movie_title = "Comedy Night"
+    else:
+        movie_title = "Horror Fest"
 
-print("\nPassenger:", name)
-print("Total Fare: PHP", round(total_fare, 2))
+    total_cost = tickets * TICKET_PRICE
 
-# Validation rules
-# 1. Passenger name -- Must not be empty
-# 2. Distance -- Number greater than 0
-# 3. Passengers -- Positive whole number
+    print("\nCustomer:", customer_name)
+    print("Movie:", movie_title)
+    print("Total Cost: PHP", round(total_cost, 2))
