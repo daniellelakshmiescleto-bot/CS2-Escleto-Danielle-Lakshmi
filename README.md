@@ -1,14 +1,13 @@
-# Travel Fare Calculator
+# Movie Ticket Calculator
 
 ## Description
-This program calculates the total travel fare based on distance, number of passengers, and a fixed rate per kilometer.
+This program calculates the total cost for movie tickets based on customer choice and quantity, complete with input validation, error handling, and re-entry loops.
 
-## Version 1 - Original code without input validation
-- Input: Accepts a passenger's name, distance in kilometers, and number of passengers.
-- Process: Calculates the total fare using `total_fare = distance * FARE_RATE * passengers`.
-- Output: Passenger name and total fare in PHP (rounded to 2 decimal places).
-- Validation Rules:
-  - Passenger name -- Must not be empty
-  - Distance -- Number greater than 0
-  - Passengers -- Positive whole number
-- Does not include input validation in code execution.
+## Version 2 - Code with Input Validation and Re-entry
+- Input: Accepts a customer's name, movie selection code, and ticket quantity with strict error-checking using `while` loops and `try-except` blocks.
+- Process: Validates that the customer name is not empty, the movie choice is valid (1–3), and the ticket count is a positive integer, re-prompting the user until valid inputs are provided. Then calculates total cost using `total_cost = tickets * TICKET_PRICE`.
+- Output: Validated customer name, selected movie title, and total cost in PHP (rounded to 2 decimal places).
+- Validation Rules Implemented:
+  - Customer name -- Must not be empty
+  - Movie choice -- Must be a valid option (1, 2, or 3)
+  - Tickets -- Positive whole number
